@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abel Antony - Portfolio</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Tailwind Configuration for colors and font */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        :root {
+            --primary-dark: #4A004A; /* Deep Purple */
+            --primary-light: #8A2BE2; /* Blue Violet */
+            --text-light: #F8FAFC; /* Off-white */
+            --text-dark: #1E293B; /* Dark Slate */
+            --bg-light: #FFFFFF; /* White */
+            --bg-dark: #1A001A; /* Even darker purple for contrast */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            scroll-behavior: smooth; /* Smooth scrolling for nav links */
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-light);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Specific styles for active navigation link */
+        .nav-link.active {
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        /* Section padding */
+        section {
+            padding: 4rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-[var(--primary-dark)] rounded-md p-2 hover:text-[var(--primary-light)] transition-colors duration-300">Abel Antony</a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="nav-link text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 rounded-md p-2">Home</a></li>
+                <li><a href="#about" class="nav-link text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 rounded-md p-2">About Me</a></li>
+                <li><a href="#experience" class="nav-link text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 rounded-md p-2">Experience</a></li>
+                <li><a href="#achievements" class="nav-link text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 rounded-md p-2">Achievements</a></li>
+                <li><a href="#contact" class="nav-link text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 rounded-md p-2">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-[var(--primary-light)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-light)] p-2 rounded-md">
+                <i class='bx bx-menu text-3xl'></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg py-4 px-4 hidden">
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#home" class="nav-link block text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 py-2 px-4 rounded-md">Home</a></li>
+                <li><a href="#about" class="nav-link block text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 py-2 px-4 rounded-md">About Me</a></li>
+                <li><a href="#experience" class="nav-link block text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 py-2 px-4 rounded-md">Experience</a></li>
+                <li><a href="#achievements" class="nav-link block text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 py-2 px-4 rounded-md">Achievements</a></li>
+                <li><a href="#contact" class="nav-link block text-lg font-medium text-gray-700 hover:text-[var(--primary-light)] transition-colors duration-300 py-2 px-4 rounded-md">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Padding to prevent content from being hidden by fixed header -->
+
+        <!-- Home Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center bg-[var(--primary-dark)] text-[var(--text-light)] overflow-hidden">
+            <!-- Background gradient/shape for visual appeal -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary-dark)] to-[var(--primary-light)] opacity-90"></div>
+            <div class="absolute inset-0 bg-pattern-dots opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+            <div class="text-center z-10 p-6 max-w-4xl mx-auto">
+                <img src="https://placehold.co/150x150/8A2BE2/FFFFFF?text=AA" alt="Abel Antony" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-white shadow-lg object-cover">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">ABEL ANTONY</h1>
+                <p class="text-2xl md:text-3xl font-light mb-8">DATA ANALYST & EDITOR</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#contact" class="bg-[var(--primary-light)] text-white px-8 py-3 rounded-full text-xl font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Get in Touch <i class='bx bx-send ml-2'></i>
+                    </a>
+                    <a href="#about" class="border-2 border-white text-white px-8 py-3 rounded-full text-xl font-semibold hover:bg-white hover:text-[var(--primary-dark)] transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Learn More <i class='bx bx-info-circle ml-2'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="bg-[var(--bg-light)] py-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-[var(--primary-dark)] mb-12">About Me</h2>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                        I am a second-year BCA student specializing in Artificial Intelligence and Data Science, with a strong interest in
+                        data analytics and storytelling through data. My coursework and projects have equipped me with
+                        foundational skills in Python, SQL, Excel, and data visualization, while my experience in video and photo editing
+                        has strengthened my attention to detail and visual communication.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        I approach every task with curiosity and a problem-solving mindset, aiming to extract meaningful insights and present them in clear, impactful ways. I
+                        am eager to apply my skills in a real-world setting and contribute to data-driven decision-making as a Data
+                        Analyst intern.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-[var(--primary-dark)] mt-10 mb-6">My Skills</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div class="flex items-center space-x-3 bg-gray-100 p-4 rounded-lg shadow-sm">
+                            <i class='bx bxl-python text-2xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium text-gray-700">Python</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-100 p-4 rounded-lg shadow-sm">
+                            <i class='bx bx-data text-2xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium text-gray-700">Data Visualisation</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-100 p-4 rounded-lg shadow-sm">
+                            <i class='bx bx-spreadsheet text-2xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium text-gray-700">Excel & PowerPoint</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-100 p-4 rounded-lg shadow-sm">
+                            <i class='bx bxl-java text-2xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium text-gray-700">Java</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-100 p-4 rounded-lg shadow-sm">
+                            <i class='bx bxl-adobe text-2xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium text-gray-700">Adobe Suite</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-100 p-4 rounded-lg shadow-sm">
+                            <i class='bx bx-data text-2xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium text-gray-700">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="bg-[var(--bg-dark)] py-16 px-4 text-[var(--text-light)]">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-[var(--primary-light)] mb-12">Experience & Education</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Work Experience -->
+                    <div class="bg-[var(--primary-dark)] p-8 rounded-xl shadow-lg border border-[var(--primary-light)]">
+                        <h3 class="text-3xl font-semibold mb-6 text-[var(--primary-light)]">Work Experience</h3>
+                        <div class="mb-8">
+                            <h4 class="text-2xl font-bold mb-2">FREELANCE VIDEO & PHOTO EDITOR</h4>
+                            <p class="text-lg font-medium text-gray-300 mb-4">2024 - NOW</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-200">
+                                <li>Worked on a variety of projects including social media content, promotional videos, and personal edits.</li>
+                                <li>Utilized tools like Adobe Premiere Pro, Photoshop, and Canva to enhance visual appeal and deliver engaging content.</li>
+                                <li>Developed a good eye for detail, creative thinking, and the ability to meet deadlines independently.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="bg-[var(--primary-dark)] p-8 rounded-xl shadow-lg border border-[var(--primary-light)]">
+                        <h3 class="text-3xl font-semibold mb-6 text-[var(--primary-light)]">Education</h3>
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2">BCA AI & DS</h4>
+                            <p class="text-lg font-medium text-gray-300 mb-2">CHINMAYA VISWAVIDHYAPEETH</p>
+                            <p class="text-lg text-gray-300">2024 - 2028</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section (Certificates) -->
+        <section id="achievements" class="bg-[var(--bg-light)] py-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-[var(--primary-dark)] mb-12">My Certifications & Achievements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Certificate 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold text-[var(--primary-dark)] mb-4">BASIC PYTHON PROGRAMMING</h3>
+                        <p class="text-lg text-gray-700 mb-4">A BASIC PYTHON PROGRAMMING COURSE BY ANALYTICS VIDHYA</p>
+                        <p class="text-md text-gray-500 flex items-center"><i class='bx bx-calendar text-xl mr-2'></i> 2024</p>
+                    </div>
+                    <!-- Certificate 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-bold text-[var(--primary-dark)] mb-4">REEL COMPETITION CERTIFICATE</h3>
+                        <p class="text-lg text-gray-700 mb-4">A REEL COMPETITION DONE BY GOVT OF KERALA HEALTH DEPARTMENT</p>
+                        <p class="text-md text-gray-500 flex items-center"><i class='bx bx-calendar text-xl mr-2'></i> 2022</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-[var(--primary-dark)] py-16 px-4 text-[var(--text-light)]">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-[var(--primary-light)] mb-12">Get in Touch</h2>
+                <div class="bg-[var(--bg-dark)] p-8 rounded-xl shadow-lg border border-[var(--primary-light)] text-center">
+                    <p class="text-xl mb-6">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                    
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-10 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <i class='bx bx-phone text-3xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium">+91 8589987450</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class='bx bx-envelope text-3xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium">hello@reallygreatsite.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class='bx bx-map text-3xl text-[var(--primary-light)]'></i>
+                            <span class="text-lg font-medium">Irrinjalakuda, Thrissur</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact form with mailto functionality -->
+                    <form action="mailto:hello@reallygreatsite.com?subject=Message from your Portfolio Website" method="post" enctype="text/plain" class="mt-8 max-w-lg mx-auto space-y-6">
+                        <input type="text" name="name" placeholder="Your Name" class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-light)] border border-gray-600">
+                        <input type="email" name="email" placeholder="Your Email" class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-light)] border border-gray-600">
+                        <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-light)] border border-gray-600"></textarea>
+                        <button type="submit" class="bg-gradient-to-br from-[var(--primary-light)] to-[var(--primary-dark)] text-white px-8 py-4 rounded-full text-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Send Message <i class='bx bx-paper-plane ml-2'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--text-dark)] text-[var(--text-light)] py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Abel Antony. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-[var(--primary-light)] hover:text-white transition-colors duration-300"><i class='bx bxl-linkedin-square text-3xl'></i></a>
+                <a href="#" class="text-[var(--primary-light)] hover:text-white transition-colors duration-300"><i class='bx bxl-github text-3xl'></i></a>
+                <a href="#" class="text-[var(--primary-light)] hover:text-white transition-colors duration-300"><i class='bx bxl-instagram text-3xl'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle and active nav link highlighting
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Toggle mobile menu visibility
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu and highlight active link on click
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to the clicked link
+                    e.currentTarget.classList.add('active');
+
+                    // If it's a mobile link, close the menu
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Highlight active nav link on scroll
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.7 // Highlight when 70% of the section is visible
+            };
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${entry.target.id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+            // Set initial active link on page load (for home section)
+            const homeLink = document.querySelector('a[href="#home"]');
+            if (homeLink) {
+                homeLink.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
